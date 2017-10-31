@@ -234,7 +234,7 @@ class PelIfd implements \IteratorAggregate, \ArrayAccess
 
                     $size = PelFormat::getSize($format);
 
-                    if ($size === '') {
+                    if (!is_numeric($size)) {
                         $size = 0;
                     }
 
